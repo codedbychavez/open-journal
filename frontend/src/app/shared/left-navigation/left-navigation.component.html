@@ -1,0 +1,19 @@
+<!-- left-navigation.component.ts -->
+<div id="left-navigation" uk-offcanvas>
+  <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+    <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+    <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+      <h2>Open-journal</h2>
+
+      <p class="uk-article-meta">"fun and easy journals for everyone, for anywhere"</p>
+
+      <!-- *new -->
+      <li routerLinkActive="uk-active"><a [routerLink]="['/home']">Home</a></li>
+      <li routerLinkActive="uk-active"><a [routerLink]="['/profile']" routerLinkActive="uk-active">Profile</a></li>
+      <li><button class="uk-button uk-button-danger uk-margin-top">Sign-out</button></li>
+    </ul>
+
+  </div>
+</div>

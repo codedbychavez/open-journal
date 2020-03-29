@@ -1,0 +1,31 @@
+<!-- edit.journal.component.html -->
+<div class="uk-container uk-margin-top">
+    <div class="uk-margin">
+        <legend class="uk-legend">Edit journal</legend>
+        
+        </div>
+        <div class="uk-margin">
+            <a routerLink="/profile" class="uk-button uk-button-text uk-text-success">Go back to journals</a>
+        </div>
+    <form [formGroup]="editJournalForm" (ngSubmit)="editJournalFormSubmit()">
+        <fieldset class="uk-fieldset">
+    
+            <div class="uk-margin">
+                <input class="uk-input" formControlName="name" type="text" placeholder="Journal Name">
+            </div>
+    
+            <div class="uk-margin">
+                <textarea formControlName="description" class="uk-textarea" rows="5" placeholder="Journal Description" style="overflow-y: scroll;"></textarea>
+            </div>
+    
+            <div class="uk-margin">
+                <textarea formControlName="content" class="uk-textarea" rows="50" placeholder="Journal Content"></textarea>
+            </div>
+    
+            <div class="uk-margin">
+                <button class="uk-button uk-button-primary uk-button-small">Update journal</button>
+                </div>
+    
+        </fieldset>
+    </form>
+    </div>

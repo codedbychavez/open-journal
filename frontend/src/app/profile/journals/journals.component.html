@@ -1,0 +1,31 @@
+<!-- journals.component.html -->
+<div class="uk-section uk-container">
+  <div class="uk-margin">
+    <legend class="uk-legend">My Journals</legend>
+  </div>
+
+  <div class="uk-child-width-1-2@s uk-grid-match" uk-grid>
+
+    <div>
+      <button [routerLink]="['create-journal']" class="uk-card uk-card-body uk-width-1-2@m uk-box-shadow-small"
+        style="border: 1px dashed #32d296;">
+        <span uk-icon="plus"></span><span uk-icon="file-text"></span><br />
+      </button>
+
+    </div>
+
+    <div *ngFor="let journal of journals; let i = index">
+      <div class="uk-card uk-card-body uk-width-1-2@m uk-box-shadow-small" style="border: 1px dashed lightgrey;">
+        <h3 class="uk-card-title">{{ journal.name }}</h3>
+        <p>{{ journal.description }}</p>
+        <button [routerLink]="['edit-journal/', journal.id]" class="uk-button uk-button-small uk-margin-right"><span
+            uk-icon="search" class="uk-text-primary"></span>View</button>
+        <button class="uk-button uk-button-small" (click)="deleteJournal(journal.id, i)"><span uk-icon="trash"
+            class="uk-text-danger"></span>Delete</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+<!-- top-navigation.component.html -->
+<nav class="uk-navbar uk-navbar-container">
+  <div class="uk-navbar-left">
+    <!-- This will toggle our left navigation -->
+    <a class="uk-navbar-toggle" href="#left-navigation" uk-toggle> <!-- Added #left-navigation to href attribute -->
+      <span uk-navbar-toggle-icon></span> <span class="uk-margin-small-left">Menu</span>
+    </a>
+  </div>
+  <div class="uk-navbar-right">
+    <!-- This button will toggle a Sign-in modal -->
+    <button class="uk-button-default uk-button-small uk-margin-small-right" uk-toggle="target: #sign-in-modal"><span uk-icon="sign-in"></span>Sign-in</button>
+    <!-- This button will toggle a Sign-up modal  -->
+    <button class="uk-button-default uk-button-small uk-margin-small-right" uk-toggle="target: #sign-up-modal"><span uk-icon="plus"></span><span
+        uk-icon="user"></span> Sign-up</button>
+  </div>
+</nav>

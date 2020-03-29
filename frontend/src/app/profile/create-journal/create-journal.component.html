@@ -1,0 +1,30 @@
+<!-- create.journal.component.html -->
+<div class="uk-container uk-margin-top">
+    <!-- *new -->
+<form [formGroup]="createJournalForm" (ngSubmit)="createJournalFormSubmit()">
+    <fieldset class="uk-fieldset">
+
+        <legend class="uk-legend">Create a journal</legend>
+
+        <div class="uk-margin">
+            <!-- *new -->
+            <input class="uk-input" formControlName="name" type="text" placeholder="Journal Name" required>
+        </div>
+
+        <div class="uk-margin">
+            <!-- *new -->
+            <textarea class="uk-textarea" formControlName="description" rows="5" placeholder="Journal Description" style="overflow-y: scroll;" required></textarea>
+        </div>
+
+        <div class="uk-margin">
+            <!-- *new -->
+            <textarea class="uk-textarea" formControlName="content" rows="50" placeholder="Journal Content" required></textarea>
+        </div>
+
+        <div class="uk-margin">
+            <button type="submit" class="uk-button uk-button-primary uk-button-small">Create journal</button>
+            </div>
+
+    </fieldset>
+</form>
+</div>
